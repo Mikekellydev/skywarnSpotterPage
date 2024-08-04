@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skywarn Spotter Community</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Skywarn Spotter Community</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#radar">NWS Radar</a></li>
+                <li><a href="#reports">Reports</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <h2>Welcome to the Skywarn Spotter Community</h2>
+            <p>Stay informed and connected with your local Skywarn Spotter community. Access real-time NWS radar, submit weather reports, and connect with other spotters.</p>
+        </section>
+
+        <!-- NWS Radar Section -->
+        <section id="radar">
+            <h2>NWS Radar</h2>
+            <div class="radar-container">
+                <!-- Radar iframe or API integration would go here -->
+                <p>Loading radar data...</p>
+            </div>
+        </section>
+
+        <!-- Reports Section -->
+        <section id="reports">
+            <h2>Weather Reports</h2>
+            <form id="reportForm">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+
+                <label for="reportType">Report Type:</label>
+                <select id="reportType" name="reportType">
+                    <option value="hail">Hail</option>
+                    <option value="tornado">Tornado</option>
+                    <option value="flood">Flood</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+
+                <button type="submit">Submit Report</button>
+            </form>
+
+            <div id="reportList">
+                <h3>Recent Reports</h3>
+                <!-- List of reports will be dynamically loaded here -->
+                <p>No reports available yet.</p>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section id="community">
+            <h2>Community Forum</h2>
+            <div class="forum-container">
+                <div class="forum-thread">
+                    <h3>Thread Title</h3>
+                    <p>Thread content...</p>
+                    <button>Reply</button>
+                </div>
+                <!-- Additional forum threads would be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings">
+            <h2>Settings</h2>
+            <form id="settingsForm">
+                <label for="aprsCallSign">APRS Call Sign:</label>
+                <input type="text" id="aprsCallSign" name="aprsCallSign">
+
+                <label for="notificationPreferences">Notification Preferences:</label>
+                <select id="notificationPreferences" name="notificationPreferences">
+                    <option value="email">Email</option>
+                    <option value="sms">SMS</option>
+                    <option value="push">Push Notifications</option>
+                </select>
+
+                <button type="submit">Save Settings</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Skywarn Spotter App</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
